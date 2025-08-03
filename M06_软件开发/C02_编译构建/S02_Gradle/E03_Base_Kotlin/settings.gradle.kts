@@ -2,4 +2,13 @@
 // 主工程名称
 rootProject.name = "E03_Base_Kotlin"
 
+/*
+ * 示例一：通过Gradle管理多模块工程。
+ */
+// 存在层级的模块需要逐级声明
+include(":M01_Module:app")
+include(":M01_Module:logic")
+include(":M01_Module:common:base")
+include(":M01_Module:common:tool")
+
 include(":M02_File")
