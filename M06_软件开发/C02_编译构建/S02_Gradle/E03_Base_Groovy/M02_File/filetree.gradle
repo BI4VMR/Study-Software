@@ -1,5 +1,5 @@
 // 调用测试方法
-example02()
+example04_2()
 
 
 /**
@@ -64,7 +64,7 @@ def example04_1() {
 /**
  * 第二步，我们提供一种正确用法。
  */
-def example03_2() {
+def example04_2() {
     def baseDir = "${layout.projectDirectory}${File.separator}testFiles"
     // 分别使用排除和包含规则创建FileTree实例，再将二者合并。
     def tree = fileTree(baseDir) { exclude "*.log" } +
