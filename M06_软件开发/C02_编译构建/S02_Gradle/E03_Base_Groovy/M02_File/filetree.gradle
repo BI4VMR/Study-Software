@@ -2,16 +2,26 @@
 example01()
 
 
+/**
+ * 示例二：FileTree的简单应用。
+ *
+ * 在本示例中，我们创建一个FileTree实例并指定参考目录，查看其匹配到的文件。
+ */
 def example01() {
     // 创建FileTree实例，指定根目录为 `<当前模块>/testFiles/` 。
     def baseDir = "${layout.projectDirectory}${File.separator}testFiles"
     def tree = fileTree(baseDir)
     // 查看匹配到的文件
-    tree.each {
-        println("${it.path}")
+    tree.each { file ->
+        println("${file.path}")
     }
 }
 
+/**
+ * 示例三：FileTree的筛选规则。
+ *
+ * 在本示例中，我们创建一个FileTree实例并指定筛选规则，查看其匹配到的文件。
+ */
 def example02() {
     // 设置过滤规则
     def filter = ["10?.log", "**/*Test*"]

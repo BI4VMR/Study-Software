@@ -2,13 +2,18 @@
 example01()
 
 
+/**
+ * 示例一：FileTree的简单应用。
+ *
+ * 在本示例中，我们创建一个FileTree实例并指定参考目录，查看其匹配到的文件。
+ */
 fun example01() {
     // 创建FileTree实例，指定根目录为 `<当前模块>/testFiles/` 。
     val baseDir = "${layout.projectDirectory}${File.separator}testFiles"
     val tree: FileTree = fileTree(baseDir)
     // 查看匹配到的文件
-    tree.forEach {
-        println("${it.path}")
+    tree.forEach { file ->
+        println("${file.path}")
     }
 }
 
